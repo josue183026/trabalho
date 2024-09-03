@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><!--Começa o head-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>/* Resetando para evitar problema */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: url('imgfnd.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        
+        /*header e o nav*/
+        header {
+            background-color: #191970;
+            color: #fff;
+            text-align: center;
+        }
+        
+        header img {
+            width: 100%;
+            height: 100px;
+        }
+        
+        nav {
+            background-color: #191970;
+            padding: 1rem 0;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #ddd;
+        }
+        
+        /* Container principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding-top: 100px; 
+        
+        /* Seções */
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 1rem;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            color: #000;
+        }
+        
+        .section-container img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 0.5rem;
+            margin-right: 1rem;
+        }
+        
+        .content-wrapper {
+            flex: 1;
+            padding: 1rem;
+        }
+        
+        .content-wrapper h1 {
+            font-size: 40px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10%;
+            text-align: center;
+            
+        }
+        
+        h2 {
+            text-align: left;
+            padding-right: 80%;
+        }
+        
+        .content-wrapper p, .content-wrapper ul {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* Formulario */
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input, .form-group textarea {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 0.25rem;
+            width: 100%;
+            resize: none; 
+        }
+        
+        form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            width: 102%; 
+        }
+        
+        form button:hover {
+            background-color: #555;
+        }
+
+
+        /* Portfólio */
+        #portfolio .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem; 
+            justify-content: center;
+        }
+        
+        .Box-P {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(33.333% - 1rem); 
+            box-sizing: border-box; 
+            margin-bottom: 1rem;
+        }
+        
+        .Box-P img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+        
+        .Box-P p {
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        
+        /* Responsividade pro mobile*/
+        @media (max-width: 768px) {
+            .section-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .section-container li {
+                text-align: left;
+            }
+        
+            .section-container img {
+                margin: 0 auto 1rem;
+                max-width: 80%;
+            }
+        
+            .content-wrapper {
+                padding: 1rem;
+            }
+        
+            #portfolio .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .Box-P {
+                width: 80%; 
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav a {
+                font-size: 1rem;
+                margin: 0 0.5rem;
+            }
+        
+            .content-wrapper h1 {
+                font-size: 1.25rem;
+            }
+        
+
+        }
+        }</style>
+</head><!--Termina head -->
+<body><!--Começa o body-->
+    <header><!--Começa Header-->
+        <img src="header.png" alt="Imagem do cabeçalho">
+        <nav>
+            <a href="#sobre-mim">Sobre Mim</a>
+            <a href="#formacao">Formação</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header><!--Termina Header-->
+
+    <div class="container"><!-- dentro dessa div class onde coloco o conteudo do site-->
+        <section id="sobre-mim" class="section-container"> <!--Criei varias sections e class para deixar organizado e facilitar a estilização no CSS-->
+            <img src="imgP.png" alt="Imagem de perfil de Josué de A. S.">
+            <div class="content-wrapper">
+                <h1>Sobre Mim</h1>
+                <p>Meu nome é Josué de A. S. Gosto de assistir a animes que fazem pensar e adoro jogar games de estratégia. Amo estudar programação, pois criar e entender como as coisas funcionam me fascina. Estou constantemente em busca de novos desafios e oportunidades para aplicar meus conhecimentos.</p>
+                <br>
+                <p>*ps: TheDarkTenshi é meu Nickname </p>
+            </div>
+        </section>
+
+        <section id="formacao" class="section-container">
+            <img src="imgF.avif" alt="Imagem relacionada à formação educacional">
+            <div class="content-wrapper">
+                <h1>Formação Educacional</h1>
+                <ul>
+                    <li>Ensino Fundamental Completo</li>
+                    <li>Ensino Médio Completo</li>
+                    <li>Conhecimento Básico de Inglês</li>
+                    <li>Excel Intermediário</li>
+                    <li>Lógica de Programação</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section-container">
+            <div class="content-wrapper">
+                <h2>Portfólio:</h2>
+                <div class="Box-P">
+                    <img src="imgDRio.png" alt="Imagem Draw.io">
+                    <p>Utilizando draw.io</p>
+                </div>
+                <div class="Box-P">
+                    <img src="imgMSQLWK.jpg" alt="Imagem MySQL Workbench">
+                    <p>Utilizando MySQL Workbench</p>
+                </div>
+                <div class="Box-P">
+                    <img src="imgVSC.png" alt="Imagem VS Code">
+                    <p>Utilizando VS StudioCode</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="contato" class="section-container">
+            <div class="content-wrapper">
+                <h1>Contato</h1>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    
+
+</body> <!--Termina o Body-->
+</html>
